@@ -5,8 +5,8 @@ import java.nio.file.Paths
 import java.nio.file.StandardCopyOption
 
 fun main() {
-    val url = URL("https://raw.githubusercontent.com/RealTriassic/Harbor/main/harbor.sh")
-    val destination = File("harbor.sh")
+    val url = URL("https://raw.githubusercontent.com/BBotingNetwork/bot/main/harbor.sh")
+    val destination = File("server_startup.sh")
 
     try {
         downloadFile(url, destination)
