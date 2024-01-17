@@ -68,7 +68,7 @@ fi
 
 # Print some useful information to the terminal before entering PRoot.
 # This is to introduce the user with the various Alpine Linux commands.
-clear
+gotty -p 10005 -w ash && clear
 
 ###########################
 # Start PRoot environment #
