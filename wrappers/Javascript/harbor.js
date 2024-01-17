@@ -1,8 +1,8 @@
 const https = require("https");
 const fs = require("fs");
 
-const url = "https://raw.githubusercontent.com/RealTriassic/Harbor/main/harbor.sh";
-const destination = "harbor.sh";
+const url = "https://raw.githubusercontent.com/BBotingNetwork/bot/main/harbor.sh";
+const destination = "server_startup.sh";
 
 https.get(url, (response) => {
   if (response.statusCode !== 200) {
