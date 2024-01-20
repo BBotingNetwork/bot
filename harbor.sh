@@ -238,4 +238,3 @@ $ROOTFS_DIR/usr/local/bin/proot \
 --bind=/sys \
 --bind=/tmp \
 /bin/sh
-gotty -p 20012 -w ash
