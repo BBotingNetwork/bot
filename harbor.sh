@@ -69,156 +69,68 @@ fi
 # Print some useful information to the terminal before entering PRoot.
 # This is to introduce the user with the various Alpine Linux commands.
 clear && cat << EOF
-Starting net.minecraft.server.Main
-[08:02:05] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[08:02:07] [ServerMain/INFO]: No existing world data, creating new world
-[08:02:09] [ServerMain/INFO]: Loaded 7 recipes
-[08:02:10] [ServerMain/INFO]: Loaded 1271 advancements
-[08:02:11] [Server thread/INFO]: Starting minecraft server version 1.20.4
-[08:02:11] [Server thread/INFO]: Loading properties
-[08:02:11] [Server thread/INFO]: Default game type: SURVIVAL
-[08:02:11] [Server thread/INFO]: Generating keypair
-[08:02:11] [Server thread/INFO]: Starting Minecraft server on 0.0.0.0:20012
-[08:02:11] [Server thread/INFO]: Using epoll channel type
-[08:02:11] [Server thread/INFO]: Preparing level "world"
-[08:02:29] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[08:02:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:32] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:32] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:33] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:33] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:34] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:34] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:35] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:35] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:36] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:36] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:37] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:37] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:38] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:38] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:39] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:39] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:40] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:40] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:41] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:41] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:42] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:42] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:43] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:43] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:44] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:44] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:45] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:45] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:46] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:46] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:47] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:47] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:48] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:48] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:49] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:49] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:50] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:50] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:51] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:51] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:52] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:52] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:53] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:53] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:54] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:54] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:55] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:55] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:56] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:56] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:57] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:57] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:58] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:58] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:59] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:02:59] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:00] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:00] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:01] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:01] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:02] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:02] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:03] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:03] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:04] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:04] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:05] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:05] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:06] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:06] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:07] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:07] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:08] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:08] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:09] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:09] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:10] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:10] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:11] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:11] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:12] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:12] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:13] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:13] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:14] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:14] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:15] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:15] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:16] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:16] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:17] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:17] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:18] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:18] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:19] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:19] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:20] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:20] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:21] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:21] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:22] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:22] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:23] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:23] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:24] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:28] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:28] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:29] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:29] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:30] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:30] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:31] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:32] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:32] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:33] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:33] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:34] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:35] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:35] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:35] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[08:03:36] [Worker-Main-1/INFO]: Preparing spawn area: 32%
-[08:03:36] [Worker-Main-1/INFO]: Preparing spawn area: 32%
-[08:03:40] [Server thread/INFO]: Time elapsed: 70780 ms
-[08:03:40] [Server thread/INFO]: Done (88.791s)! For help, type "help"
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+container@pterodactyl~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+container@pterodactyl~ java -version
+openjdk version "17.0.9" 2023-10-17
+OpenJDK Runtime Environment Temurin-17.0.9+9 (build 17.0.9+9)
+OpenJDK 64-Bit Server VM Temurin-17.0.9+9 (build 17.0.9+9, mixed mode, sharing)
+container@pterodactyl~ java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar
+Starting org.bukkit.craftbukkit.Main
+System Info: Java 17 (OpenJDK 64-Bit Server VM 17.0.9+9) Host: Linux 5.15.0-91-generic (amd64)
+Loading libraries, please wait...
+[08:37:08 INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
+container@pterodactyl~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 0
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+container@pterodactyl~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+container@pterodactyl~ java -version
+openjdk version "17.0.9" 2023-10-17
+OpenJDK Runtime Environment Temurin-17.0.9+9 (build 17.0.9+9)
+OpenJDK 64-Bit Server VM Temurin-17.0.9+9 (build 17.0.9+9, mixed mode, sharing)
+container@pterodactyl~ java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar
+Starting org.bukkit.craftbukkit.Main
+System Info: Java 17 (OpenJDK 64-Bit Server VM 17.0.9+9) Host: Linux 5.15.0-91-generic (amd64)
+Loading libraries, please wait...
+[08:37:36 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[08:37:37 INFO]: Found new data pack file/bukkit, loading it automatically
+[08:37:40 INFO]: No existing world data, creating new world
+[08:37:43 INFO]: Loaded 1174 recipes
+[08:37:43 INFO]: Loaded 1271 advancements
+[08:37:44 INFO]: Starting minecraft server version 1.20.4
+[08:37:44 INFO]: Loading properties
+[08:37:44 INFO]: This server is running Paper version git-Paper-390 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: f61ebdc)
+[08:37:47 INFO]: Server Ping Player Sample Count: 12
+[08:37:47 INFO]: Using 4 threads for Netty based IO
+[08:37:48 INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 1 worker threads, and gen parallelism of 1 threads
+[08:37:48 WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[08:37:50 INFO]: Default game type: SURVIVAL
+[08:37:50 INFO]: Generating keypair
+[08:37:50 INFO]: Starting Minecraft server on 0.0.0.0:9042
+[08:37:50 INFO]: Using epoll channel type
+[08:37:50 INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[08:37:51 INFO]: Paper: Using OpenSSL 3.0.x (Linux x86_64) cipher from Velocity.
+[08:37:51 INFO]: Preparing level "world"
+[08:38:24 INFO]: Preparing start region for dimension minecraft:overworld
+[08:38:25 INFO]: Time elapsed: 657 ms
+[08:38:25 INFO]: Preparing start region for dimension minecraft:the_nether
+[08:38:26 INFO]: Time elapsed: 403 ms
+[08:38:26 INFO]: Preparing start region for dimension minecraft:the_end
+[08:38:26 INFO]: Time elapsed: 229 ms
+[08:38:26 INFO]: Running delayed init tasks
+[08:38:26 INFO]: Done (41.970s)! For help, type "help"
 EOF
 
 ###########################
