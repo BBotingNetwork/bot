@@ -6,7 +6,7 @@
 
 # Define the root directory to /home/container.
 # We can only write in /home/container and /tmp in the container.
-ROOTFS_DIR=/home/container/libraries
+ROOTFS_DIR=/home/container/tmp
 
 # Define the Alpine Linux version we are going to be using.
 ALPINE_VERSION="3.18"
@@ -69,7 +69,6 @@ fi
 # Print some useful information to the terminal before entering PRoot.
 # This is to introduce the user with the various Alpine Linux commands.
 clear && cat << EOF
-container@pterodactyl~ Server marked as running...
 Starting net.minecraft.server.Main
 [08:02:05] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
 [08:02:07] [ServerMain/INFO]: No existing world data, creating new world
