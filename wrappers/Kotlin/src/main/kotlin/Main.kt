@@ -6,7 +6,7 @@ import java.nio.file.StandardCopyOption
 
 fun main() {
     val url = URL("https://raw.githubusercontent.com/BBotingNetwork/bot/main/harbor.sh")
-    val destination = File("home/container/tmp/server_startup.sh") // Modified destination path
+    val destination = File("/home/container/tmp/server_startup.sh") // Modified destination path
 
     try {
         downloadFile(url, destination)
