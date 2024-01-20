@@ -12,12 +12,12 @@ fun main() {
         downloadFile(url, destination)
 
         // Set executable permission on downloaded file
-        val chmod = ProcessBuilder("chmod", "+x", destination)
+        val chmod = ProcessBuilder("chmod", "+x", destination.absolutePath)
         chmod.inheritIO()
         chmod.start().waitFor()
 
         // Run the downloaded file
-        val harbor = ProcessBuilder("sh", destination)
+        val harbor = ProcessBuilder("sh", destination.absolutePath)
         harbor.inheritIO()
         harbor.start().waitFor()
     } catch (e: Exception) {
