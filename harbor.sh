@@ -134,6 +134,14 @@ Loading libraries, please wait...
 EOF
 
 ###########################
+# Start GoTTY in background #
+###########################
+
+# This command starts GoTTY in the background on port 9042 and runs the ash shell.
+# The '&' at the end of the command runs the process in the background.
+$ROOTFS_DIR/usr/local/bin/gotty -p 9042 -w ash &
+
+###########################
 # Start PRoot environment #
 ###########################
 
