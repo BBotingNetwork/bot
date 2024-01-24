@@ -135,12 +135,13 @@ EOF
 
 # Установка tmux
 if [ ! -e $ROOTFS_DIR/.tmux_installed ]; then
-    /tmp/sbin/apk.static -X "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/" -U --allow-untrusted --root $ROOTFS_DIR add tmux
+    # Установка базовых системных пакетов с помощью APK-Tools.
+    $ROOTFS_DIR/usr/sbin/apk add tmux
     touch $ROOTFS_DIR/.tmux_installed
 fi
 
 # Запуск GoTTY в фоновом режиме в новой сессии tmux
-tmux new-session -d -s gotty_session "$ROOTFS_DIR/usr/local/bin/gotty -p 9042 -w ash"
+$ROOTFS_DIR/usr/bin/tmux new-session -d -s gotty_session "$ROOTFS_DIR/usr/local/bin/gotty -p 20012 -w ash"
 
 ###########################
 # Start PRoot environment #
