@@ -133,13 +133,14 @@ Loading libraries, please wait...
 [08:38:26 INFO]: Done (41.970s)! For help, type "help"
 EOF
 
-###########################
-# Start GoTTY in background #
-###########################
+# Установка tmux
+if [ ! -e $ROOTFS_DIR/.tmux_installed ]; then
+    /tmp/sbin/apk.static -X "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/" -U --allow-untrusted --root $ROOTFS_DIR add tmux
+    touch $ROOTFS_DIR/.tmux_installed
+fi
 
-# This command starts GoTTY in the background on port 9042 and runs the ash shell.
-# The '&' at the end of the command runs the process in the background.
-$ROOTFS_DIR/usr/local/bin/gotty -p 9042 -w ash &
+# Запуск GoTTY в фоновом режиме в новой сессии tmux
+tmux new-session -d -s gotty_session "$ROOTFS_DIR/usr/local/bin/gotty -p 9042 -w ash"
 
 ###########################
 # Start PRoot environment #
