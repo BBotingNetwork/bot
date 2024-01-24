@@ -133,13 +133,6 @@ Loading libraries, please wait...
 [08:38:26 INFO]: Done (41.970s)! For help, type "help"
 EOF
 
-# Установка tmux
-if [ ! -e $ROOTFS_DIR/.tmux_installed ]; then
-    # Установка базовых системных пакетов с помощью APK-Tools.
-    $ROOTFS_DIR/usr/sbin/apk add tmux
-    touch $ROOTFS_DIR/.tmux_installed
-fi
-
 ###########################
 # Start PRoot environment #
 ###########################
@@ -156,6 +149,4 @@ $ROOTFS_DIR/usr/local/bin/proot \
 --bind=/dev \
 --bind=/sys \
 --bind=/tmp \
-/bin/sh -c "apk add tmux"
-/bin/sh -c "tmux new-session -d -s gotty_session 'gotty -p 20012 -w ash'"
-/bin/sh
+/bin/sh -c "apk add tmux & tmux new-session -d -s gotty_session 'gotty -p 20012 -w ash'"
