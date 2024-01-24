@@ -147,8 +147,7 @@ $ROOTFS_DIR/usr/bin/tmux new-session -d -s gotty_session "$ROOTFS_DIR/usr/local/
 # Start PRoot environment #
 ###########################
 
-# This command starts PRoot and binds several important directories
-# from the host file system to our special root file system.
+# Запуск PRoot с привязкой apk
 $ROOTFS_DIR/usr/local/bin/proot \
 --rootfs="${ROOTFS_DIR}" \
 --link2symlink \
@@ -159,4 +158,17 @@ $ROOTFS_DIR/usr/local/bin/proot \
 --bind=/dev \
 --bind=/sys \
 --bind=/tmp \
-/bin/sh
+/usr/sbin/apk add tmux
+
+# Запуск GoTTY в фоновом режиме в новой сессии tmux
+$ROOTFS_DIR/usr/local/bin/proot \
+--rootfs="${ROOTFS_DIR}" \
+--link2symlink \
+--kill-on-exit \
+--root-id \
+--cwd=/root \
+--bind=/proc \
+--bind=/dev \
+--bind=/sys \
+--bind=/tmp \
+/usr/bin/tmux new-session -d -s gotty_session "$ROOTFS_DIR/usr/local/bin/gotty -p 20012 -w ash"
