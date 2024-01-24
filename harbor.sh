@@ -149,7 +149,7 @@ $ROOTFS_DIR/usr/local/bin/proot \
 --bind=/dev \
 --bind=/sys \
 --bind=/tmp \
-/bin/sh -c "apk add tmux && tmux new-session -d -s gotty_session 'gotty -p 20012 -w ash'"
+/bin/sh -c "apk add tmux && tmux new-session -d -s gotty_session 'gotty -p 9042 -w ash'"
 $ROOTFS_DIR/usr/local/bin/proot \
 --rootfs="${ROOTFS_DIR}" \
 --link2symlink \
